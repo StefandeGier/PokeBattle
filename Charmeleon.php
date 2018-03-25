@@ -5,7 +5,7 @@ class Charmeleon extends Pokemon {
   public $pokemon = "Charmeleon";
   public $energy = "Fire";
   public $hitpoints = "60";
-  public $attacks = array("Head Butt" => 10, "Flare" => 30);
+  public $attacks = array("Headbutt" => 10, "flare" => 30);
   public $weakness = array("Water" => 2);
   public $resistance = array("Lightning" => 10);
 
@@ -13,5 +13,4 @@ class Charmeleon extends Pokemon {
       {
         parent::__construct($name, $this->pokemon, $this->energy, $this->hitpoints, $this->attacks, $this->weakness, $this->resistance);
       }
-
 }
