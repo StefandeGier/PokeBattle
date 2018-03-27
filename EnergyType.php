@@ -9,6 +9,10 @@ class EnergyType
   const FIRE = 'Fire';
   const ICE = 'Ice';
   const ELECTRIC = 'Electric';
+  const WATER = 'Water';
+  const LIGHTING = 'Lighting';
+  const FIGHTING = 'Fighting';
+
 
 
   public $name;

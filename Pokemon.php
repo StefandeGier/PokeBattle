@@ -1,9 +1,7 @@
 <?php
 
-
-
 class Pokemon{
-//private datgene wat niet echt hoeft geprint te worden
+
 public $pokemon;
 public $name;
 public $energy;
@@ -32,3 +30,9 @@ public $resistance;
 
 
 }
+
+  function doAttack($par1, $par2)
+  {
+    $result = "$par1 $par2";
+    return $result;
+  }

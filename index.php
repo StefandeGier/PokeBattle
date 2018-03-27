@@ -8,6 +8,7 @@ require 'EnergyType.php';
 require 'Weakness.php';
 require 'Resistance.php';
 
+
 //EnergyType
 
 //$energytype = new EnergyType('fire');
@@ -21,13 +22,8 @@ print_r('<pre>'. $powerkick . '</pre>');
 $pikachu = new Pikachu('Lisa');
 $charmeleon = new Charmeleon('Stefan zijn Charmeleon');
 
-print_r('<pre>'. $pikachu . '</pre>');
+print_r('<pre>'. $pikachu->pokemon . '</pre>');
 
 print_r('<pre>'. $charmeleon . '</pre>');
 
-
-echo "dit zijn de hitpoints:";
-
-
-
-//getAttacks($test);
+echo doAttack($pikachu->pokemon,$charmeleon->pokemon);
