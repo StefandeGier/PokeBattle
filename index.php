@@ -19,11 +19,18 @@ $powerkick = new Attack('powerkick', '120');
 print_r('<pre>'. $powerkick . '</pre>');
 
 //pokemons
-$pikachu = new Pikachu('Lisa');
+$pikachu = new Pikachu('Lisa haar Pikachu');
 $charmeleon = new Charmeleon('Stefan zijn Charmeleon');
 
-print_r('<pre>'. $pikachu->pokemon . '</pre>');
+
+
+print_r('<pre>'. $pikachu . '</pre>');
 
 print_r('<pre>'. $charmeleon . '</pre>');
+echo "HP:<br>";
+//echo doAttack();
+echo "Charmeleon attack op Pikachu";
+$charmeleon->doAttack($charmeleon->attacks[1]->hitpoints,$pikachu);
 
-echo doAttack($pikachu->pokemon,$charmeleon->pokemon);
+echo "Pikachu attack op Charmeleon";
+$pikachu->doAttack($pikachu->attacks[1]->hitpoints,$charmeleon);

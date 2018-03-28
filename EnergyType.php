@@ -10,7 +10,7 @@ class EnergyType
   const ICE = 'Ice';
   const ELECTRIC = 'Electric';
   const WATER = 'Water';
-  const LIGHTING = 'Lighting';
+  //const LIGHTING = 'Lighting';
   const FIGHTING = 'Fighting';
 
 
