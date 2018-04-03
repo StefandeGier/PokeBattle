@@ -27,22 +27,23 @@ public $resistance;
       //define variables
       $hpadd = 0;
       $energy = $this->energy->name;
-      $tenergy = $target->weakness->energytype->name;
+      $tEnergy = $target->weakness->energytype->name;
+
+      $damage = $attack->hitpoints;
 
         //checks if weakness is activated
         if ($energy == $tenergy) {
-         $attack = $attack * $target->weakness->multiplier;
+         $damage = $damage * $target->weakness->multiplier;
         // echo "<br> hij is uitgelopen in weakness";
 
          //checks if resistance is activated
         }
         if ($energy == $target->resistance->energytype->name) {
-          $hpadd = $target->resistance->value;
+          $damage = $damage - $target->resistance->value;
           //echo "<br> hij is uitgelopen in resistance";
         }
         //calculate totall
-        $hp = $target->hitpoints - $attack;
-        $hpresult = $hp + $hpadd;
+        $target->resolveDamage($damage);
           /*echo "<br> hij is uitgelopen";
           echo '<br>'.$energy;
           echo '<br>'.$target->resistance->energytype->name;
@@ -51,7 +52,9 @@ public $resistance;
           echo '<h2>' . $hpresult . '</h2>';
     }
 
-
+    public function resolveDamage($damage) {
+      $this->hitpoints = $this->hitpoints - $damage;
+    }
 
       public function __toString() {
           return json_encode($this);
